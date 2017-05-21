@@ -1,0 +1,13 @@
+User-Agent: *
+Disallow: 
+Disallow: /js
+Disallow: /mail
+Disallow: /icons
+Disallow: /img
+Allow: /index.html
+Allow: /css
+Allow: /favicon
+Allow: /vendor
+Disallow: /package.json
+Disallow: /gulpfile.js
+Allow: /dowhileFacebook.png

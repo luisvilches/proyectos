@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+   background: #eee;
+}
+
+.logo{
+  font-family: 'Baloo', cursive;
+  font-size: 30px;
+}
+
+.navbar {
+    border-radius: 0px;
+    box-shadow: 0px 10px 20px #ccc;
+}
+
+.alt{
+  margin-top: 100px !important;
+}
+
+.contenedor{
+  max-width: 700px;
+}
+
+.card {
+  background: #fff;
+}
+
+.meme{
+  width: 100%;
+}
+
+.cardTitle{
+  padding: 20px;
+}
