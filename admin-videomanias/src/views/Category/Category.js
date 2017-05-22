@@ -58,6 +58,8 @@ class Categoria extends Component {
     return (
       <div className="animated fadeIn">
         <h3>Administrador de categorias</h3>
+        <Button color="info" className="pull-right"> Nueva categoria </Button>
+        <br/>
         <br/> 
         <Table>
             <thead>
@@ -77,8 +79,6 @@ class Categoria extends Component {
                     <td>{item.description}</td>
                     <td>
                       <ButtonGroup>
-                        <Link to={`product/gallery/${item.nameUrl}`} className="btn btn-info" title="Galeria"><i className="fa fa-picture-o" aria-hidden="true"></i></Link>
-                        <Link to={`product/${item.nameUrl}`} className="btn btn-primary" title="Editar"><i className="fa fa-pencil-square-o" aria-hidden="true"></i></Link>
                         <Button color="danger" onClick={this.delete.bind(this,item._id)} title="Eliminar"><i className="fa fa-trash-o" aria-hidden="true"></i></Button>
                       </ButtonGroup>
                     </td>

@@ -87,7 +87,7 @@ class Ficha extends Component {
     fetch(`${this.state.api}/product/${this.props.params.product}`)
     .then(res => res.json())
     .then(response => {
-      edit:response.data.description
+     
       this.setState({
         product: response.data,
         text: response.data.description,
@@ -97,9 +97,9 @@ class Ficha extends Component {
         pie: response.data.pie,
         media:response.data.media,
       })
-      console.log(response.data.name)
+      
     })
-
+    console.log(this.props.params.product)
   }
 
   editarSave(){
@@ -114,7 +114,7 @@ class Ficha extends Component {
    
     if(!this.refs.img.files[0]){
 
-     fetch(`${this.state.api}/admin/product/${this.state.product._id}`,
+     fetch(`${this.state.api}/product/${this.state.product._id}`,
           {
              headers: {
               'Accept': 'application/json',
@@ -133,7 +133,7 @@ class Ficha extends Component {
 
     }else{
         formData.append("img", this.refs.img.files[0]);
-        fetch(`${this.state.api}/admin/product/image/${this.state.product._id}`,
+        fetch(`${this.state.api}/product/image/${this.state.product._id}`,
             {
               headers: {
                 'Accept': 'application/json',

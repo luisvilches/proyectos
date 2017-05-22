@@ -25,7 +25,7 @@ class InitSession extends Component {
         formData.append('name',user)
         formData.append('password',pass)
 
-        fetch(API + '/initSession', {
+        fetch(API + '/login', {
         method: 'POST',
         body: formData
         })
@@ -35,15 +35,18 @@ class InitSession extends Component {
                 alert('Usuario o contraseña incorrectos!!')
             } else{
                 console.log(data)
-                localStorage.setItem('token', data.token);
-                localStorage.setItem('success', data.success);
-                localStorage.setItem('user', data.user._id)
-                this.setState({
-                    session: true,
-                })
-
-
-                //location.reload();
+                if(data.user.admin === true){
+                  localStorage.setItem('token', data.token);
+                  localStorage.setItem('success', data.success);
+                  localStorage.setItem('user', data.user._id)
+                  this.setState({
+                      session: true,
+                  })
+                  location.reload();
+                } else {
+                  alert('usuario invalido')
+                }
+                
             }
         })
 

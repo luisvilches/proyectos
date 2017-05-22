@@ -24,7 +24,7 @@ export default (
       <Route path="familias" name="Familias" component={Family}/>
       <Route path="generos" name="Generos" component={Gender}/>
       <Route path="productos/new" name="Nuevo producto" component={ProductosNew}/>
-      <Route path="product/:product" name="Ficha de producto" component={FichaProducto}/>
+      <Route path="product/:product" name="Ficha producto" component={FichaProducto}/>
       <Route path="product/gallery/:product" name="Galeria de producto" component={Gallery}/>
     </Route>
   </Router>
